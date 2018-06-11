@@ -9,6 +9,7 @@
 /*scroll to top*/
 
 $(document).ready(function(){
+
 	$(function () {
 		$.scrollUp({
 	        scrollName: 'scrollUp', // Element ID
@@ -27,4 +28,16 @@ $(document).ready(function(){
 	        zIndex: 2147483647 // Z-Index for the overlay
 		});
 	});
+
+	$(".add-to-cart").click(function () {
+
+		var id = $(this).attr("data-id");
+
+		$.post("/cart/addAjax/"+id , {} , function (data) {
+			$("#cart-count").html(data);
+        });
+		return false;
+
+    });
+
 });

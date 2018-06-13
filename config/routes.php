@@ -11,6 +11,7 @@ return array(
     'cart/add/([0-9]+)' => 'cart/add/$1', //action Add in CartController
     'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1', //action Add in CartController
     'cart/delete/([0-9]+)' => 'cart/delete/$1', //action delete in CartController
+    'cart/checkout' => 'cart/checkout',
     'cart' => 'cart/index',
 
     'user/register' => 'user/register',

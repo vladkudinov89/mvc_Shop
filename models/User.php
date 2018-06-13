@@ -41,6 +41,17 @@ class User
         return false;
     }
 
+    public static function checkPhone($phone)
+    {
+
+        $phone = intval($phone);
+
+        if (strlen($phone) >= 10) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Проверяет email
      */

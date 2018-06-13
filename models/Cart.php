@@ -45,6 +45,9 @@ class Cart
 
     }
 
+    /**
+     * @return bool
+     */
     public static function getProducts()
     {
         if ($_SESSION['products']) {
@@ -57,7 +60,7 @@ class Cart
     public static function getTotalPrice($products)
     {
         $productsInCart = self::getProducts();
-        print_r($productsInCart);
+        //print_r($productsInCart);
 
         $total = 0;
 
@@ -77,6 +80,14 @@ class Cart
 
         unset($productsInCart[$id]);
         $_SESSION['products'] = $productsInCart;
+    }
+
+    public static function clear()
+    {
+        if (isset($_SESSION['products'])){
+            unset($_SESSION['products']);
+        }
+
     }
 
 }

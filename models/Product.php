@@ -86,8 +86,7 @@ class Product
         
         $result = $db->query('SELECT * FROM product '
                 . 'WHERE status = "1" AND is_recommended = "1"'
-                . 'ORDER BY id DESC '                
-                . 'LIMIT ' . self::SHOW_RECOMMENDED);
+                . 'ORDER BY id DESC ');
 
         $i = 0;
         while ($row = $result->fetch()) {

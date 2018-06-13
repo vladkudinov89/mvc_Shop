@@ -4,9 +4,11 @@
 
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-	};	
+	};
 		
 /*scroll to top*/
+
+
 
 $(document).ready(function(){
 
@@ -39,5 +41,25 @@ $(document).ready(function(){
 		return false;
 
     });
+
+    $('.owl-carousel').owlCarousel({
+        items:3,
+        loop:true,
+        nav: true,
+        margin:10,
+        dots: false,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+    });
+
+    $('.owl-carousel img').css({
+        width:255,
+        //height:237
+    });
+    // $('.owl-carousel img').css("height","237px");
+
+
 
 });
